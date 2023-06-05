@@ -21,6 +21,7 @@ namespace BinarySearchTree
         }
         private Node Root;
 
+        //UC1 - Add method in BST
         public void Add(int data)
         {
             Node newNode = new Node(data);
@@ -57,8 +58,35 @@ namespace BinarySearchTree
                     return;
                 }
             }
-            
         }
 
+        //UC2 - Search method in BST
+        public bool Search(int data)
+        {
+            if (Root == null)
+            {
+                Console.WriteLine("\nThe binary tree is empty");
+                return false;
+            }
+
+            Node temp = Root;
+
+            while (temp != null)
+            {
+                if (data == temp.Data)
+                {
+                    return true;
+                }
+                else if (data < temp.Data)
+                {
+                    temp = temp.left;
+                }
+                else if (data > temp.Data)
+                {
+                    temp = temp.right;
+                }
+            }
+            return false;
+        }
     }
 }

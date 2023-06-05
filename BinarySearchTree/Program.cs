@@ -5,15 +5,17 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Binary Search Tree\n");
-            CustomBST customObject = new CustomBST();
+            CustomBST customTree = new CustomBST();
 
-            customObject.Add(67);
-            customObject.Add(45);
-            customObject.Add(61);
-            customObject.Add(38);
-            customObject.Add(51);
-            customObject.Add(64);
-            customObject.Add(81);
+            customTree.Add(67);
+            customTree.Add(45);
+            customTree.Add(38);
+            customTree.Add(51);
+            customTree.Add(64);
+            customTree.Add(81);
+
+            Console.WriteLine("Check 64 : " + customTree.Search(64));
+            Console.WriteLine("Check 52 : " + customTree.Search(52));
         }
     }
 }
