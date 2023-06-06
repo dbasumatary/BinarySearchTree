@@ -8,7 +8,7 @@ namespace BinarySearchTree
 {
     public class CustomBST
     {
-        private class Node
+        public class Node
         {
             public int Data;
             public Node left;
@@ -20,6 +20,11 @@ namespace BinarySearchTree
             }
         }
         private Node Root;
+
+        public Node ReturnRoot()
+        {
+            return Root;
+        }
 
         //UC1 - Add method in BST
         public void Add(int data)
@@ -87,6 +92,18 @@ namespace BinarySearchTree
                 }
             }
             return false;
+        }
+
+        //UC3 - Preorder traversal in BST
+        //For Preorder, we traverse from the root to the left subtree then to the right subtree.
+        public void PreorderDisplay(Node root)
+        {
+            if (root != null)
+            {
+                Console.Write(root.Data + " ");
+                PreorderDisplay(root.left);
+                PreorderDisplay(root.right);
+            }
         }
     }
 }
