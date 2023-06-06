@@ -105,5 +105,17 @@ namespace BinarySearchTree
                 PreorderDisplay(root.right);
             }
         }
+
+        //UC4 - Inorder traversal in BST
+        //For Inorder, you traverse from the left subtree to the root then to the right subtree.
+        public void InorderDisplay(Node root)
+        {
+            if(root != null)
+            {
+                InorderDisplay(root.left);
+                Console.Write(root.Data + " ");
+                InorderDisplay(root.right);
+            }
+        }
     }
 }

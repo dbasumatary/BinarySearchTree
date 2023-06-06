@@ -24,6 +24,9 @@
 
             Console.Write("\nPreorder Traversal : ");
             customTree.PreorderDisplay(customTree.ReturnRoot());
+
+            Console.Write("\nInorder Traversal : ");
+            customTree.InorderDisplay(customTree.ReturnRoot());
         }
     }
 }
